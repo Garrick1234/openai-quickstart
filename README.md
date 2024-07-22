@@ -1,3 +1,7 @@
+# Homework1
+
+Link: https://chatgpt.com/share/30563fae-408d-417b-8ce4-897514fb55cc
+
 # OpenAI 快速入门
 
 <p align="center">
