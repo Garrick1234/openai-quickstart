@@ -8,6 +8,10 @@ from model import GLMModel, OpenAIModel
 from translator import PDFTranslator
 
 if __name__ == "__main__":
+
+    os.environ['OPENAI_API_KEY'] = 'sk-cxaJqd8WiUff6tui995521441b814dA79585124bCd531460'
+    os.environ['OPENAI_BASE_URL'] = 'https://api.xiaoai.plus/v1'
+
     argument_parser = ArgumentParser()
     args = argument_parser.parse_arguments()
     config_loader = ConfigLoader(args.config)
@@ -24,4 +28,5 @@ if __name__ == "__main__":
 
     # 实例化 PDFTranslator 类，并调用 translate_pdf() 方法
     translator = PDFTranslator(model)
-    translator.translate_pdf(pdf_file_path, file_format)
+    translator.translate_pdf(pdf_file_path, file_format, 'Japanese', 'translated_Japanese.md')
+    translator.translate_pdf(pdf_file_path, file_format, 'Korean', 'translated_korean.md')
