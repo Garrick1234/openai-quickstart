@@ -4,12 +4,10 @@ from langchain_openai import OpenAIEmbeddings
 from langchain.chains import RetrievalQA
 from langchain_openai import ChatOpenAI
 from langchain_community.vectorstores import FAISS
-
 import os
 
 
-def initialize_sales_bot(vector_store_dir: str="real_estates_sale"):
-
+def initialize_sales_bot(vector_store_dir: str="oocl_sale"):
     os.environ['OPENAI_API_KEY'] = 'sk-cxaJqd8WiUff6tui995521441b814dA79585124bCd531460'
     os.environ['OPENAI_BASE_URL'] = 'https://api.xiaoai.plus/v1'
 
@@ -40,19 +38,20 @@ def sales_chat(message, history):
         return ans["result"]
     # 否则输出套路话术
     else:
-        return "这个问题我要问问领导"
+        return ("感谢您的提问！目前我没有找到一个直接的答案，但我会帮您记录下这个问题并转交给我们的专业团队。"
+                "您也可以通过邮件（support@example.com）或电话（123-456-7890）联系我们获得进一步的帮助。")
     
 
 def launch_gradio():
     demo = gr.ChatInterface(
         fn=sales_chat,
-        title="房产销售",
+        title="船运公司客服",
         # retry_btn=None,
         # undo_btn=None,
         chatbot=gr.Chatbot(height=600),
     )
 
-    demo.launch(share=True, server_name="0.0.0.0")
+    demo.launch(share=True, server_name="localhost")
 
 if __name__ == "__main__":
     # 初始化房产销售机器人
