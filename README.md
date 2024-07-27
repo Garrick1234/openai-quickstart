@@ -4,7 +4,20 @@ Link: https://chatgpt.com/share/30563fae-408d-417b-8ce4-897514fb55cc
 
 # Homework2
 1. GPT-4V的使用
+
+![gpt-4v.png](openai_api/images/gpt-4v.png)
 ![img.png](img.png)
+2. ai translator的使用
+![img2.png](img2.png)
+![img3.png](img3.png)
+3. 扩展langchain chains
+![img4.png](img4.png)
+![img5.png](img5.png)
+
+# Homework3
+实战sales chatbot
+![img6.png](img6.png)
+
 
 # OpenAI 快速入门
 
