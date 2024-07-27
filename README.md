@@ -2,6 +2,10 @@
 
 Link: https://chatgpt.com/share/30563fae-408d-417b-8ce4-897514fb55cc
 
+# Homework2
+1. GPT-4V的使用
+![img.png](img.png)
+
 # OpenAI 快速入门
 
 <p align="center">
